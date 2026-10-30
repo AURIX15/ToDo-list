@@ -8,10 +8,12 @@
     <meta name="theme-color" content="#1a3a52">
     <meta name="description" content="A simple and organized task management app.">
 
-    <title>My To-Do List</title>
+    <title>My To-Do List | AURIX15</title>
 
-    <link rel="stylesheet" href="style_clean.css">
-    <script src="Script.js" defer></script>
+    <link rel="manifest" href="./manifest.json">
+
+    <link rel="stylesheet" href="./style_clean.css">
+    <script src="./Script.js" defer></script>
 </head>
 
 <body>
@@ -108,10 +110,21 @@
         </p>
 
         <footer class="footer">
-            <p>My To-Do List</p>
+            <p>AURIX15 To-Do List</p>
         </footer>
 
     </main>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./sw.js")
+                    .catch(error => {
+                        console.error("Service Worker registration failed:", error);
+                    });
+            });
+        }
+    </script>
 
 </body>
 </html>
