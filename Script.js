@@ -20,7 +20,7 @@ const progressBar = document.getElementById("progressBar");
 const emptyState = document.getElementById("emptyState");
 
 const deleteCompletedBtn = document.getElementById("deleteCompletedBtn");
-const exportBtn = document.getElementById("exportBtn");
+
 const clearBtn = document.getElementById("clearBtn");
 
 
